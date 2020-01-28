@@ -1,4 +1,4 @@
-package arkanoid.version01;
+package arkanoid.version02;
 
 import java.awt.Graphics;
 
@@ -6,6 +6,7 @@ public abstract class Objeto {
 	
 	protected int x,y; // Coordenadas en las que se encuentra el actor
 	protected int width, height; // Ancho y alto que ocupa, imprescindible para detectar colisiones
+	
 
 	public Objeto() {
 		
@@ -80,6 +81,7 @@ public abstract class Objeto {
 	public void setHeight(int height) {
 		this.height = height;
 	}
+	
 
 
 	

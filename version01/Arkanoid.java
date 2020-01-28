@@ -1,4 +1,4 @@
-package arkanoid.version01;
+package arkanoid.version02;
 
 import java.awt.BorderLayout;
 import java.awt.Canvas;
@@ -78,10 +78,32 @@ public class Arkanoid extends Canvas {
 		p.setVx(10);
 		p.setVy(10);
 		objetos.add(p);
-		Ladrillo l = new Ladrillo();
-		l.getX();
-		l.getY();
-		objetos.add(l);
+		int coordIniX = 10;
+		int coordIniY = 10;
+		for (int fil = 0; fil < 4; fil++) {
+			for (int col = 0; col < 12; col++) {
+				Ladrillo l = new Ladrillo();
+				if(fil == 0) {
+					l.setColor(Color.RED);
+				}
+				if(fil == 1) {
+					l.setColor(Color.BLUE);
+				}
+				if(fil == 2) {
+					l.setColor(Color.YELLOW);
+				}
+				if(fil == 3) {
+					l.setColor(Color.GREEN);
+				}
+				l.setX(coordIniX);
+				l.setY(coordIniY);
+				objetos.add(l);
+				coordIniX += 65;
+			}
+			coordIniY += 35;
+			coordIniX = 10;
+			
+		}
 		Barra b = new Barra();
 		b.getX();
 		b.getY();
